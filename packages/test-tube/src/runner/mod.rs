@@ -58,10 +58,6 @@ pub trait Runner<'a> {
                     value: value.to_vec().clone(),
                 }),
                 CosmosMsg::Wasm(msg) => wasm_msg_to_any(msg, signer),
-                CosmosMsg::Any(msg) => Ok(cosmrs::Any {
-                    type_url: msg.type_url.to_owned(),
-                    value: msg.value.to_vec(),
-                }),
                 other => {
                     println!(
                         "{}",
