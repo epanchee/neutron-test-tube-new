@@ -162,7 +162,7 @@ impl<'a> Runner<'a> for NeutronTestApp {
 #[cfg(test)]
 mod tests {
     use cosmwasm_std::{coins, Coin};
-    use neutron_sdk::proto_types::osmosis::tokenfactory::v1beta1::{
+    use neutron_std::types::osmosis::tokenfactory::v1beta1::{
         MsgCreateDenom, MsgCreateDenomResponse, QueryParamsRequest, QueryParamsResponse,
     };
 

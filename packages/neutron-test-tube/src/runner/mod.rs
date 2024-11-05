@@ -14,7 +14,7 @@ mod tests {
     };
     use cosmwasm_std::{to_json_binary, BankMsg, Coin, CosmosMsg, Empty, Event, WasmMsg};
     use cw1_whitelist::msg::{ExecuteMsg, InstantiateMsg};
-    use neutron_sdk::proto_types::osmosis::tokenfactory::v1beta1::{
+    use neutron_std::types::osmosis::tokenfactory::v1beta1::{
         MsgCreateDenom, MsgCreateDenomResponse,
     };
     use std::ffi::CString;

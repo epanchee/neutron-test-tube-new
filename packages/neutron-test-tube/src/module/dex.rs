@@ -1,4 +1,4 @@
-use neutron_sdk::proto_types::neutron::dex as DexTypes;
+use neutron_std::types::neutron::dex as DexTypes;
 use test_tube_ntrn::{fn_execute, fn_query};
 
 use test_tube_ntrn::module::Module;
@@ -124,7 +124,8 @@ where
     }
     fn_query! {
         pub simulate_withdraw_filled_limit_order ["/neutron/dex/simulate_withdraw_filled_limit_order"]: DexTypes::QuerySimulateWithdrawFilledLimitOrderRequest => DexTypes::QuerySimulateWithdrawFilledLimitOrderResponse
-    }    fn_query! {
+    }
+    fn_query! {
         pub simulate_cancel_limit_order ["/neutron/dex/simulate_cancel_limit_order"]: DexTypes::QuerySimulateCancelLimitOrderRequest => DexTypes::QuerySimulateCancelLimitOrderResponse
     }
 }
@@ -132,7 +133,7 @@ where
 #[cfg(test)]
 mod tests {
     use cosmwasm_std::Coin;
-    use neutron_sdk::proto_types::neutron::dex as DexTypes;
+    use neutron_std::types::neutron::dex as DexTypes;
 
     use crate::{Account, Dex, NeutronTestApp};
     use test_tube_ntrn::Module;
@@ -167,6 +168,7 @@ mod tests {
                     expiration_time: None,
                     max_amount_out: "".to_string(),
                     limit_sell_price: (10u128 * scale_factor).to_string(),
+                    min_average_sell_price: "".to_string(),
                 },
                 &signer,
             )

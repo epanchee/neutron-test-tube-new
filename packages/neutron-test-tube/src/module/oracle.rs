@@ -1,4 +1,4 @@
-use neutron_sdk::proto_types::slinky::oracle::v1::{
+use neutron_std::types::slinky::oracle::v1::{
     GetPriceRequest, GetPriceResponse, GetPricesRequest, GetPricesResponse,
 };
 use test_tube_ntrn::fn_query;
@@ -32,8 +32,8 @@ where
 mod tests {
     use crate::{NeutronTestApp, Oracle};
     use cosmwasm_std::Coin;
-    use neutron_sdk::proto_types::slinky::oracle::v1::GetPriceRequest;
-    use neutron_sdk::proto_types::slinky::types::v1::CurrencyPair;
+    use neutron_std::types::slinky::oracle::v1::GetPriceRequest;
+    use neutron_std::types::slinky::types::v1::CurrencyPair;
     use test_tube_ntrn::Module;
 
     #[test]

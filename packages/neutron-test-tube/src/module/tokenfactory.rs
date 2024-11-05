@@ -1,4 +1,4 @@
-use neutron_sdk::proto_types::osmosis::tokenfactory::v1beta1::{
+use neutron_std::types::osmosis::tokenfactory::v1beta1::{
     MsgBurn, MsgBurnResponse, MsgChangeAdmin, MsgChangeAdminResponse, MsgCreateDenom,
     MsgCreateDenomResponse, MsgMint, MsgMintResponse, MsgSetDenomMetadata,
     MsgSetDenomMetadataResponse, QueryDenomAuthorityMetadataRequest,
@@ -61,7 +61,7 @@ where
 mod tests {
     use cosmos_sdk_proto::cosmos::bank::v1beta1::QueryBalanceRequest;
     use cosmwasm_std::{Coin, Uint128};
-    use neutron_sdk::proto_types::osmosis::tokenfactory::v1beta1::{
+    use neutron_std::types::osmosis::tokenfactory::v1beta1::{
         MsgBurn, MsgCreateDenom, MsgMint, QueryDenomsFromCreatorRequest,
     };
 
@@ -108,8 +108,8 @@ mod tests {
 
         assert_eq!(denoms, [denom.clone()]);
         // TODO mint new denom
-        let coin: neutron_sdk::proto_types::cosmos::base::v1beta1::Coin =
-            neutron_sdk::proto_types::cosmos::base::v1beta1::Coin {
+        let coin: neutron_std::types::cosmos::base::v1beta1::Coin =
+            neutron_std::types::cosmos::base::v1beta1::Coin {
                 amount: Uint128::new(1000000000).to_string(),
                 denom: denom.clone(),
             };

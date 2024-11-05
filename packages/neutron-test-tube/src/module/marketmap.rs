@@ -1,4 +1,4 @@
-use neutron_sdk::proto_types::slinky::marketmap::v1::{
+use neutron_std::types::slinky::marketmap::v1::{
     LastUpdatedRequest, LastUpdatedResponse, MarketMapRequest, MarketMapResponse, MarketRequest,
     MarketResponse, ParamsRequest, ParamsResponse,
 };
