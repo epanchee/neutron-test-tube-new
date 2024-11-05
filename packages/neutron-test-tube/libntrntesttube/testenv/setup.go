@@ -41,9 +41,9 @@ import (
 	wasmtypes "github.com/CosmWasm/wasmd/x/wasm/types"
 
 	// neutron
-	"github.com/neutron-org/neutron/v4/app"
-	dexmoduletypes "github.com/neutron-org/neutron/v4/x/dex/types"
-	tokenfactorytypes "github.com/neutron-org/neutron/v4/x/tokenfactory/types"
+	"github.com/neutron-org/neutron/v5/app"
+	dexmoduletypes "github.com/neutron-org/neutron/v5/x/dex/types"
+	tokenfactorytypes "github.com/neutron-org/neutron/v5/x/tokenfactory/types"
 )
 
 type TestEnv struct {
