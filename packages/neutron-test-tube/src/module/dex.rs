@@ -113,20 +113,25 @@ where
     fn_query! {
         pub pool_metadata_all ["/neutron.dex.Query/AllPoolMetadata"]: DexTypes::QueryAllPoolMetadataRequest => DexTypes::QueryAllPoolMetadataResponse
     }
+
     fn_query! {
-        pub simulate_deposit ["/neutron/dex/simulate_deposit"]: DexTypes::QuerySimulateDepositRequest => DexTypes::QuerySimulateDepositResponse
+        pub simulate_deposit ["/neutron.dex.Query/SimulateDeposit"]: DexTypes::QuerySimulateDepositRequest => DexTypes::QuerySimulateDepositResponse
     }
+
     fn_query! {
-        pub simulate_withdrawal ["/neutron/dex/simulate_withdrawal"]: DexTypes::QuerySimulateWithdrawalRequest => DexTypes::QuerySimulateWithdrawalResponse
+        pub simulate_withdrawal ["/neutron.dex.Query/SimulateWithdrawal"]: DexTypes::QuerySimulateWithdrawalRequest => DexTypes::QuerySimulateWithdrawalResponse
     }
+
     fn_query! {
-        pub simulate_place_limit_order ["/neutron/dex/simulate_place_limit_order"]: DexTypes::QuerySimulatePlaceLimitOrderRequest => DexTypes::QuerySimulatePlaceLimitOrderResponse
+        pub simulate_place_limit_order ["/neutron.dex.Query/SimulatePlaceLimitOrder"]: DexTypes::QuerySimulatePlaceLimitOrderRequest => DexTypes::QuerySimulatePlaceLimitOrderResponse
     }
+
     fn_query! {
-        pub simulate_withdraw_filled_limit_order ["/neutron/dex/simulate_withdraw_filled_limit_order"]: DexTypes::QuerySimulateWithdrawFilledLimitOrderRequest => DexTypes::QuerySimulateWithdrawFilledLimitOrderResponse
+        pub simulate_withdraw_filled_limit_order ["/neutron.dex.Query/SimulateWithdrawFilledLimitOrder"]: DexTypes::QuerySimulateWithdrawFilledLimitOrderRequest => DexTypes::QuerySimulateWithdrawFilledLimitOrderResponse
     }
+
     fn_query! {
-        pub simulate_cancel_limit_order ["/neutron/dex/simulate_cancel_limit_order"]: DexTypes::QuerySimulateCancelLimitOrderRequest => DexTypes::QuerySimulateCancelLimitOrderResponse
+        pub simulate_cancel_limit_order ["/neutron.dex.Query/SimulateCancelLimitOrder"]: DexTypes::QuerySimulateCancelLimitOrderRequest => DexTypes::QuerySimulateCancelLimitOrderResponse
     }
 }
 
